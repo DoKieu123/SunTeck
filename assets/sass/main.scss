@@ -4,6 +4,16 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html {
+    /* 62.5% = 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    overflow-x:hidden;
+}
 img{
     width: 100%;
 }
@@ -14,7 +24,16 @@ img{
 ul{
     list-style: none;
 }
-
+.list--aline{
+    width:25%;
+    
+}
+.container___main{
+    width:75%;
+}
+.main_center{
+    max-width: 100%;
+}
 .suntech_menu{
     display: flex;
     justify-content: space-between;
@@ -22,6 +41,9 @@ ul{
     padding: 0px 30px;
     align-items: center;
     
+}
+.menu_none{
+    display: none;
 }
 .menu_logo{
     color:#3cb878;
@@ -45,6 +67,9 @@ a{
 }
 }
 
+}
+.btl_close{
+    display: none;
 }
 
 .menu_icon{
@@ -110,14 +135,16 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
+    padding: 50px 5px;
     
 .list_img{
-    width: 400px;
-    margin: 0 10px;
+   
+    
 &:hover .list_icon{
     display: block;
 }
+
+
 .text--black{
     font-weight: 600;
     margin-top: 10px;
@@ -132,7 +159,7 @@ h2{
 }
 
 }
-.list--aline{
+
 
 
 h3{
@@ -160,7 +187,7 @@ p{
     top: 5px;
     right: 5px;
 }
-}
+
 .suntech_StaticBlock{
     background-color: #f5f6f9;
     text-align: center;
@@ -247,6 +274,12 @@ p{
 }
 }
 }
+.Products_list{
+    padding: 10px 35px;
+}
+.item_img{
+    margin: 0 8px;
+}
 .suntech_footer{
     background-color: black;
     color: rgb(104, 99, 99);
@@ -260,9 +293,222 @@ p{
 .col-icon{
     display: flex;
     align-items: center;
-    margin-left: 300px;
+    justify-content: center;
+    
+   
 li{
     margin:0px 10px;
 }
 }
 }
+.item_img{
+    width : calc( 100% / 5 - 20px )
+
+}
+
+.block_item{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.menu_list--mobie{
+    display: none;
+}
+// Tablet: width >=740px and width < 1024px
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375rem) {
+
+.suntech_hearder{
+    h2{
+        top: 200px;
+        left: 70px;
+    }
+}
+.suntech_menu{
+    background-color: white;
+}
+
+.conten_list{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 50px 5px;
+}
+  
+.main_center{
+    max-width: 100%;
+}
+.list--aline{
+    width:35%;
+    
+}
+.container___main{
+    width:75%;
+}
+
+.menu_none{
+    display: block;
+    position: absolute;
+    right: 40px;
+    padding: 2px 15px;
+    border:1px solid #0d0d0d;
+    font-size: 13px;
+    border-radius: 5px;
+
+}
+
+
+.menu_icon{
+    margin-right: 100px;
+}
+.btl_close{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #0d0d0d;
+    border-radius: 50%;
+    border: 0px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 16px;
+
+}
+.menu_list--mobie{
+    display:none;
+    width: 220px;
+    background-color: white;
+    position:fixed;
+    top: 0px; 
+    bottom: 0px;
+    right: 5px; 
+    min-height: 100vh; 
+    max-height: 110vh;
+    z-index: 100000;
+    text-align: center;
+    padding-top: 50px;
+   
+    li{
+        padding: 20px 0px;
+    }
+}
+
+.item_img{
+    width : calc( 100% / 3 - 20px )
+
+}
+
+.block_item{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.suntech_sibar{
+    .button{
+        margin-top: 20px;
+    }
+}
+.suntech_footer{
+    height: 90px;
+}
+.row-width{
+    padding: 20px 0px;
+   img{
+    height:50px;
+    width: 50px;
+}
+}
+ .menu_list{
+    display: none;
+}
+
+ }
+
+ // mobie : width <740px
+
+ @media only screen and (max-width:46.1875em) {
+    .menu_none{
+        display: block;
+        position: absolute;
+        right: 40px;
+        padding: 2px 15px;
+        border:1px solid #0d0d0d;
+        font-size: 13px;
+        border-radius: 5px;
+    
+    }
+    
+    
+    .menu_icon{
+        margin-right: 100px;
+    }
+    .btl_close{
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-color: #0d0d0d;
+        border-radius: 50%;
+        border: 0px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: white;
+        font-size: 16px;
+    
+    }
+    .menu_list{
+        display: none;
+    }
+    .menu_list--mobie{
+        display:none;
+        width: 220px;
+        background-color: white;
+        position:fixed;
+        top: 0px; 
+        bottom: 0px;
+        right: 5px; 
+        min-height: 100vh; 
+        max-height: 110vh;
+        z-index: 100000;
+        text-align: center;
+        padding-top: 50px;
+       
+        li{
+            padding: 20px 0px;
+        }
+    }
+    
+    .suntech_hearder{
+        h2{
+            top: 150px;
+            left: 40px;
+            font-size: 20px;
+        }
+    }
+    .item_img{
+        width : calc( 100% / 2 - 20px )
+    
+    }
+    
+    .block_item{
+        display:flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .list--aline{
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .suntech_bestseller{
+        display: block;
+    }
+    .suntech_sibar{
+    .col_clients{
+        padding: 40px 0px;
+    }
+    }
+    
+    
+ }
